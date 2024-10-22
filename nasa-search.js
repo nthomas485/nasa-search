@@ -40,6 +40,10 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
+      title: { type: String },
+      loading: { type: Boolean, reflect: true },
+      items: { type: Array, },
+      value: { type: String },
     };
   }
 
