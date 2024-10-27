@@ -42,19 +42,19 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       details {
-        margin: 16px;
-        padding: 16px;
+        margin: var(---ddd-spacing-4, 16px);
+        padding: var(---ddd-spacing-4, 16px);
         background-color: var(--ddd-theme-default-wonderPurple);
       }
       summary {
         font-size: 24px;
-        padding: 8px;
+        padding: var(--ddd-spacing-2, 8px);
         color: var(--ddd-theme-default-white);
-        font-size: 42px;
+        font-size: var(--ddd-font-size-l);
       }
       input {
-        font-size: 20px;
-        line-height: 40px;
+        font-size: var(--ddd-font-size-20px, 20px);
+        line-height: var(--ddd-lh-40, 40px);
         width: 100%;
       }
     `;
@@ -72,7 +72,7 @@ export class nasaSearch extends DDDSuper(I18NMixin(LitElement)) {
     return html`
     <h2>${this.title}</h2>
     <details open>
-      <summary>Search inputs</summary>
+      <summary>Search</summary>
       <div>
         <input type="text" id="text-box" placeholder="Search NASA images" @input="${this.inputChanged}" />
       </div>

@@ -55,7 +55,11 @@ export class nasaImage extends DDDSuper(I18NMixin(LitElement)) {
       }
       a:visited{
         text-decoration: none;
+      a:active{
+        text-decoration: none;
+        color: black;
       }
+    }
     
         `];
       }
